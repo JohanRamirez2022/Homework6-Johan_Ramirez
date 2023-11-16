@@ -27,7 +27,6 @@ class LinkedBSTree: public LinkedBTree <ItemType>
 
     public:
     LinkedBSTree();
-
     bool add(const ItemType& newData) override;
 };
 

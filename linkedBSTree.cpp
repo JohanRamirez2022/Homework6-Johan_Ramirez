@@ -1,10 +1,10 @@
 #include "linkedBSTree.h"
 
 template<class ItemType>
-LinkedBSTree<ItemType> :: LinkedBSTree() : rootPtr(nullptr) {}
-
-
-
+LinkedBSTree<ItemType>:: LinkedBSTree()
+{
+    rootPtr = nullptr;
+}
 
 template<class ItemType>
 bool LinkedBSTree<ItemType>::add(const ItemType& newData)
@@ -15,7 +15,7 @@ bool LinkedBSTree<ItemType>::add(const ItemType& newData)
 }
 
 template<class ItemType>
-LinkedTreeNode<ItemType>* LinkedBSTree<ItemType> :: placeNode(LinkedTreeNode<ItemType>* subTreePtr, LinkedTreeNode<ItemType>* newNodePtr)
+LinkedTreeNode<ItemType>* LinkedBSTree<ItemType>:: placeNode(LinkedTreeNode<ItemType>* subTreePtr, LinkedTreeNode<ItemType>* newNodePtr)
 {
     if (subTreePtr == nullptr)
     {
@@ -59,14 +59,14 @@ LinkedTreeNode<ItemType>* removeValue(LinkedTreeNode<ItemType>* subTreePtr, cons
             isSuccessful = true;
             return subTreePtr;
         }
-        else if (subTreePtr->getLeftChildPtr = nullptr)
+        else if (subTreePtr->getLeftChildPtr == nullptr)
         {
             LinkedTreeNode<ItemType>* temp = subTreePtr->getRightChildPtr();
             subTreePtr = nullptr;
             isSuccessful = true;
             return temp;
         }
-        else if (subTreePtr->getRightChildPtr = nullptr)
+        else if (subTreePtr->getRightChildPtr == nullptr)
         {
             LinkedTreeNode<ItemType>* temp = subTreePtr->getLeftChildPtr();
             subTreePtr = nullptr;

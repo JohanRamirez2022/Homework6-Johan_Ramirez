@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "compiles",
+      "setup": "",
+      "run": "make",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
